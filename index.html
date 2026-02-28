@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn to Crochet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🧶 Learn to Crochet</h1>
+    <p>Interactive Beginner Tutorial</p>
+</header>
+
+<div class="container">
+
+<div class="progress-bar">
+    <div class="progress" id="progress"></div>
+</div>
+
+<!-- Step 1 -->
+<div class="step active">
+    <h2>Step 1: What is Crochet?</h2>
+    <p>
+        Crochet is a method of creating fabric using a hook and yarn.
+        It is used to make clothes, blankets, toys, and more!
+    </p>
+</div>
+
+<!-- Step 2 -->
+<div class="step">
+    <h2>Step 2: Tools You Need</h2>
+    <ul>
+        <li>✔ Crochet Hook</li>
+        <li>✔ Yarn</li>
+        <li>✔ Scissors</li>
+        <li>✔ Yarn Needle</li>
+    </ul>
+</div>
+
+<!-- Step 3 -->
+<div class="step">
+    <h2>Step 3: Basic Stitches</h2>
+
+    <div class="stitch-card">
+        <strong>Magic Ring / Magic Circle (mr)</strong>
+        <p class="info">
+            Wrap yarn around your fingers to form a loop. Insert hook,
+            pull up a loop, chain 1, crochet into the ring, then pull the tail to tighten.
+        </p>
+    </div>
+
+    <div class="stitch-card">
+        <strong>Chain Stitch (ch)</strong>
+        <p class="info">
+            The foundation of most crochet projects.
+            Make a slip knot and pull yarn through loop repeatedly.
+        </p>
+    </div>
+
+    <div class="stitch-card">
+        <strong>Single Crochet (sc)</strong>
+        <p class="info">
+            Insert hook, yarn over, pull through,
+            yarn over again, pull through both loops.
+        </p>
+    </div>
+
+    <div class="stitch-card">
+        <strong>Half Double Crochet (hdc)</strong>
+        <p class="info">
+            Yarn over, insert hook, yarn over and pull through.
+            You now have three loops. Yarn over again and pull through all three loops.
+        </p>
+    </div>
+
+    <div class="stitch-card">
+        <strong>Double Crochet (dc)</strong>
+        <p class="info">
+            Yarn over, insert hook, pull through,
+            yarn over pull through 2 loops twice.
+        </p>
+    </div>
+
+</div>
+
+<!-- Step 4 -->
+<div class="step">
+    <h2>Step 4: Mini Quiz</h2>
+    <div class="quiz">
+        <p>Which stitch is commonly used to start amigurumi projects?</p>
+
+        <button onclick="checkAnswer('wrong')">Double Crochet</button>
+        <button onclick="checkAnswer('correct')">Magic Ring</button>
+        <button onclick="checkAnswer('wrong')">Half Double Crochet</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<!-- Step 5 -->
+<div class="step">
+    <h2>🎉 Congratulations!</h2>
+    <p>You completed the beginner crochet tutorial!</p>
+</div>
+
+<div class="buttons">
+    <button onclick="prevStep()">Previous</button>
+    <button onclick="nextStep()">Next</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
