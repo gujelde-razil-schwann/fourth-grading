@@ -118,7 +118,7 @@ function showFinalScore() {
     answersEl.innerHTML = "";
     nextQuestionBtn.style.display = "none";
     resultEl.textContent = "You scored " + score + " out of " + quizData.length + "!";
-    resultEl.style.color = "blue";
+    resultEl.style.color = "#a3b8e6";
 }
 
 /* Initial Load */
