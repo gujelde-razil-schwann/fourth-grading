@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fdf6f0;
+    color: #333;
+}
+
+header {
+    background: #c97b84;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.step {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.step.active {
+    display: block;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #c97b84;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #a85e66;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 10px;
+    width: 0%;
+    background: #c97b84;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.stitch-card {
+    background: #f9e4e7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.stitch-card .info {
+    display: none;
+    margin-top: 10px;
+}
+
+.quiz {
+    margin-top: 15px;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 10px;
+}
