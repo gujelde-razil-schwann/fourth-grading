@@ -1,13 +1,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fdf6f0;
+    background: linear-gradient(to bottom, #bca3e6, #a3b8e6);
     color: #333;
 }
 
 header {
-    background: #c97b84;
-    color: white;
+    background: #34312f;
+    color: #ebf6f7;
     padding: 20px;
     text-align: center;
 }
@@ -20,7 +20,7 @@ header {
 
 .step {
     display: none;
-    background: white;
+    background: #ebf6f7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -41,18 +41,18 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #c97b84;
-    color: white;
+    background: #34312f;
+    color: #ebf6f7;
     font-size: 16px;
 }
 
 button:hover {
-    background: #a85e66;
+    background: #34312f;
 }
 
 .progress-bar {
     width: 100%;
-    background: #eee;
+    background: #34312f;
     border-radius: 20px;
     margin: 20px 0;
 }
@@ -60,13 +60,13 @@ button:hover {
 .progress {
     height: 10px;
     width: 0%;
-    background: #c97b84;
+    background: #ebf6f7;
     border-radius: 20px;
     transition: 0.3s;
 }
 
 .stitch-card {
-    background: #f9e4e7;
+    background: #ebf6f7;
     padding: 15px;
     margin: 10px 0;
     border-radius: 10px;
