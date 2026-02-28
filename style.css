@@ -92,12 +92,12 @@ button:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background: #c97b84;
-    color: white;
+    background: linear-gradient(to bottom, #bca3e6, #a3b8e6);
+    color: #ebf6f7;
     font-size: 16px;
     cursor: pointer;
 }
 
 #nextQuestionBtn:hover {
-    background: #a85e66;
+    background: linear-gradient(to bottom, #bca3e6, #a3b8e6);
 }
