@@ -92,12 +92,15 @@
 <!-- Step 4 -->
 <div class="step">
     <h2>Step 4: Mini Quiz</h2>
-    <div class="quiz">
-        <p>Which stitch is commonly used to start amigurumi projects?</p>
 
-        <button onclick="checkAnswer('wrong')">Double Crochet</button>
-        <button onclick="checkAnswer('correct')">Magic Ring</button>
-        <button onclick="checkAnswer('wrong')">Half Double Crochet</button>
+    <div class="quiz">
+        <p id="question"></p>
+
+        <div id="answers"></div>
+
+        <button id="nextQuestionBtn" onclick="nextQuestion()" style="display:none;">
+            Next Question
+        </button>
 
         <div class="result" id="result"></div>
     </div>
