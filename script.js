@@ -22,7 +22,6 @@ function prevStep() {
     }
 }
 
-/* Stitch Card Toggle */
 document.querySelectorAll(".stitch-card").forEach(card => {
     card.addEventListener("click", () => {
         const info = card.querySelector(".info");
@@ -49,7 +48,7 @@ const quizData = [
         correct: 1
     },
     {
-        question: "Which stitch is taller: Single Crochet or Double Crochet?",
+        question: "Which stitch is taller?",
         answers: ["Single Crochet", "Double Crochet", "They are equal"],
         correct: 1
     }
@@ -75,7 +74,9 @@ function loadQuestion() {
         button.textContent = answer;
         button.style.display = "block";
         button.style.margin = "10px 0";
-        button.onclick = () => selectAnswer(index);
+        button.onclick = function () {
+            selectAnswer(index);
+        };
         answersEl.appendChild(button);
     });
 }
@@ -109,7 +110,7 @@ function showFinalScore() {
     questionEl.textContent = "Quiz Completed!";
     answersEl.innerHTML = "";
     nextQuestionBtn.style.display = "none";
-    resultEl.textContent = You scored ${score} out of ${quizData.length}!;
+    resultEl.textContent = "You scored " + score + " out of " + quizData.length + "!";
     resultEl.style.color = "blue";
 }
 
