@@ -2,6 +2,7 @@ let currentStep = 0;
 const steps = document.querySelectorAll(".step");
 const progress = document.getElementById("progress");
 
+/* Step Navigation */
 function showStep(index) {
     steps.forEach(step => step.classList.remove("active"));
     steps[index].classList.add("active");
@@ -22,6 +23,7 @@ function prevStep() {
     }
 }
 
+/* Stitch Card Toggle */
 document.querySelectorAll(".stitch-card").forEach(card => {
     card.addEventListener("click", () => {
         const info = card.querySelector(".info");
@@ -30,7 +32,6 @@ document.querySelectorAll(".stitch-card").forEach(card => {
 });
 
 /* QUIZ SYSTEM */
-
 const quizData = [
     {
         question: "Which stitch is used to start most amigurumi projects?",
@@ -62,6 +63,7 @@ const answersEl = document.getElementById("answers");
 const resultEl = document.getElementById("result");
 const nextQuestionBtn = document.getElementById("nextQuestionBtn");
 
+/* Load current question */
 function loadQuestion() {
     const currentQuiz = quizData[currentQuestion];
     questionEl.textContent = currentQuiz.question;
@@ -74,13 +76,12 @@ function loadQuestion() {
         button.textContent = answer;
         button.style.display = "block";
         button.style.margin = "10px 0";
-        button.onclick = function () {
-            selectAnswer(index);
-        };
+        button.onclick = () => selectAnswer(index);
         answersEl.appendChild(button);
     });
 }
 
+/* Handle answer selection */
 function selectAnswer(index) {
     const correctIndex = quizData[currentQuestion].correct;
 
@@ -96,16 +97,22 @@ function selectAnswer(index) {
     nextQuestionBtn.style.display = "block";
 }
 
+/* Move to next quiz question */
 function nextQuestion() {
     currentQuestion++;
 
     if (currentQuestion < quizData.length) {
-        loadQuestion();
+        loadQuestion(); // load next question in same step
     } else {
         showFinalScore();
+        // Automatically move to Step 5 after 2 seconds
+        setTimeout(() => {
+            nextStep();
+        }, 2000);
     }
 }
 
+/* Show final quiz score */
 function showFinalScore() {
     questionEl.textContent = "Quiz Completed!";
     answersEl.innerHTML = "";
@@ -114,5 +121,6 @@ function showFinalScore() {
     resultEl.style.color = "blue";
 }
 
+/* Initial Load */
 showStep(currentStep);
 loadQuestion();
